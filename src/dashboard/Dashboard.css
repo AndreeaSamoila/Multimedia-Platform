@@ -94,7 +94,8 @@ body {
     padding-right: 200px;
 }
 .icons {
-    transform: scale(2.8);
+    width: 3.75rem !important;
+    height: 3.75rem  !important;
 }
 .description {
     display: flex;

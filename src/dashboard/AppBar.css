@@ -4,13 +4,7 @@
     background-size: cover;
     /*position: fixed;*/
 }
-.navlinks {
-    display: flex;
-}
-.logo {
-    flex-grow: 1;
-    cursor: pointer;
-}
+
 .link {
     text-decoration:none;
     color: white;
