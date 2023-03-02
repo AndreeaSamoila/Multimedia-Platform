@@ -2,10 +2,12 @@
     background-image: url('../assets/Home-Header.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-right: 0;
+    overflow: visible;
     /*position: fixed;*/
 }
 
-.link {
+.link-menu {
     text-decoration:none;
     color: white;
     font-size: 18px;
@@ -13,7 +15,40 @@
     padding: 20px;
 }
 
-.link:hover {
+.link-menu:hover {
     color: yellow;
     border-bottom: 1px solid white;
 }
+.link-box {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.link-account {
+    text-decoration:none;
+    color: black;
+    font-size: 18px;
+    width: 80px;
+    font-family: 'Archivo', sans-serif;
+    padding: 12px 12px 12px 12px;
+    display: flex;
+    flex-grow:1;
+    justify-content: center;
+
+}
+.link-account:hover {
+    color: white;
+    background: blue;
+
+}
+.roundedButton {
+    border:2px solid white;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 50px;
+
+}.roundedButton:hover {
+ background-color: white;
+color:black;
+ }

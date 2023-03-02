@@ -16,8 +16,8 @@ import "./AppBar.css";
 import {Link,  useNavigate } from "react-router-dom";
 import DrawerPage from "./Drawer";
 
-const pages = ['Courses', 'Forum', 'About', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Courses','Events', 'FAQ','Forum', 'About',"Let's talk", 'Contact'];
+const settings = ['Profile', 'MyAccount', 'Login'];
 
 
 
@@ -26,6 +26,7 @@ function ResponsiveAppBar() {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [isRounded, setIsRounded] = React.useState(false);
 
     const navigate = useNavigate();
 
@@ -49,6 +50,25 @@ function ResponsiveAppBar() {
         navigate(`/`)
     }
 
+    const makeMarginButton = (page) => {
+
+            if( page === "Let's talk") {
+                return "link-menu" + " roundedButton";
+
+            }
+            else {
+                return "link-menu"
+            }
+
+
+    }
+
+    const makeMarginButtonFunction = () => {
+
+        makeMarginButton(pages);
+        console.log('ss-a pus')
+
+    }
 
 
     return (
@@ -76,43 +96,6 @@ function ResponsiveAppBar() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <DrawerPage></DrawerPage>
-                        {/*<IconButton*/}
-                        {/*    size="large"*/}
-                        {/*    aria-label="account of current user"*/}
-                        {/*    aria-controls="menu-appbar"*/}
-                        {/*    aria-haspopup="true"*/}
-                        {/*    onClick={handleOpenNavMenu}*/}
-                        {/*    color="inherit"*/}
-                        {/*>*/}
-                        {/*    <MenuIcon />*/}
-
-                        {/*</IconButton>*/}
-                        {/*<Menu*/}
-                        {/*    id="menu-appbar"*/}
-                        {/*    anchorEl={anchorElNav}*/}
-                        {/*    anchorOrigin={{*/}
-                        {/*        vertical: 'bottom',*/}
-                        {/*        horizontal: 'left',*/}
-                        {/*    }}*/}
-                        {/*    keepMounted*/}
-                        {/*    transformOrigin={{*/}
-                        {/*        vertical: 'top',*/}
-                        {/*        horizontal: 'left',*/}
-                        {/*    }}*/}
-                        {/*    open={Boolean(anchorElNav)}*/}
-                        {/*    onClose={handleCloseNavMenu}*/}
-                        {/*    sx={{*/}
-                        {/*        display: { xs: 'block', md: 'none' },*/}
-                        {/*    }}*/}
-                        {/*>*/}
-                        {/*    {pages.map((page) => (*/}
-                        {/*        <MenuItem key={page} onClick={handleClick(page)}>*/}
-                        {/*            <Typography textAlign="center">{page}*/}
-                        {/*                <Drawer></Drawer>*/}
-                        {/*            </Typography>*/}
-                        {/*        </MenuItem>*/}
-                        {/*    ))}*/}
-                        {/*</Menu>*/}
                     </Box>
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
@@ -135,15 +118,31 @@ function ResponsiveAppBar() {
                         I LEARNING
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Link className="link"
+                        {pages.map((page) => {
+                            let className = 'link-menu';
+                            if( page === "Let's talk") {
+                                className += ' roundedButton';
+                            }
+                            // className={makeMarginButton(page)
+                            return (
+                            <Link className={className}
+
                                 to={`/${page}`}
                                 key={page}
+
                                 // style={{ my: 5, color: 'white', display: 'block'}}
+
+
+
+                                  // style={{
+                                  //     border: isRounded  ? '1px solid #4CAF50' : '',
+                                  //     margin: isRounded  ? '7px' : '',
+                                  // }}
                             >
                                 {page}
                             </Link>
-                        ))}
+                        )})}
+
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
@@ -153,6 +152,7 @@ function ResponsiveAppBar() {
                             </IconButton>
                         </Tooltip>
                         <Menu
+
                             sx={{ mt: '45px' }}
                             id="menu-appbar"
                             anchorEl={anchorElUser}
@@ -169,10 +169,12 @@ function ResponsiveAppBar() {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                <Link className="link-account"  key={setting} to={`/${setting}`} onClick={handleCloseUserMenu}>
                                     <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
+                                </Link>
                             ))}
+
+
                         </Menu>
                     </Box>
 

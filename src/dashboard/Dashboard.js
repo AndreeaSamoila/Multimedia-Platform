@@ -16,7 +16,7 @@ function Dashboard() {
         <div>
                 <div className="dashBg">
                     <div className="text-center">
-                    <h1 className="title"><span>Învață programare de oriunde. Plătește abia după ce finalizezi. Construiește-ți o carieră pentru întreaga viață</span></h1>
+                    <h1 className="title"><span>Learn to code from anywhere. Pay when you’re done. Build a career for life.</span></h1>
                     </div>
 
                 <div className="section">
@@ -25,8 +25,8 @@ function Dashboard() {
                     <CalendarMonthOutlinedIcon  className="icons"></CalendarMonthOutlinedIcon>
 
                     <div className="description">
-                    <h3><span>Invata in 10 luni</span></h3>
-                    <p>online sau in campus</p>
+                    <h3><span>10-month course</span></h3>
+                    <p>Learn remotely or on campus</p>
                     </div>
                 </div>
 
@@ -34,43 +34,43 @@ function Dashboard() {
                     <WorkOutlineOutlinedIcon className="icons"></WorkOutlineOutlinedIcon>
 
                     <div className="description">
-                    <h3><span>Job garantat în IT</span></h3>
-                    <p>la una dintre companiile noastre partenere</p>
+                    <h3><span>Guaranteed job in IT</span></h3>
+                    <p>At 450+ partner companies across Europe</p>
                     </div>
                 </div>
 
                 <div className="item-section">
                     <PriceCheckOutlinedIcon className="icons"></PriceCheckOutlinedIcon>
                     <div className="description">
-                    <h3><span>7000 RON* salariu minim</span></h3>
-                    <p>pe care îl poți dubla în mai puțin de 2 ani</p>
+                    <h3><span>40,000-60,000€ annual salary</span></h3>
+                    <p>After 2-3 years of work experience, depending on the country</p>
                     </div>
                 </div>
 
                 <div className="item-section">
                     <DesktopWindowsOutlinedIcon className="icons"></DesktopWindowsOutlinedIcon>
                     <div className="description">
-                    <h3><span>Flexibilitate totală</span></h3>
-                    <p>Tu alegi de unde vrei să studiezi și să lucrezi</p>
+                    <h3><span>Full flexibility</span></h3>
+                    <p>Study and work where you choose</p>
                         </div>
                 </div>
 
                 <div className="item-section">
                     <CreditScoreIcon className="icons"></CreditScoreIcon>
                     <div className="description">
-                    <h3><span>Învață acum, plătește după</span></h3>
-                    <p>Achită în rate abia după ce te angajezi</p>
+                    <h3><span>Learn now, pay later</span></h3>
+                    <p>Pay monthly after you're hired</p>
                     </div>
                 </div>
 
             </div>
                     <div className="center-btn">
                         <button className="btn" >
-                            <div>FULLSTACK DEVELOPER</div>
+                            <div>FULLSTACK DEVELOPMENT COURSE</div>
                         </button>
                     </div>
                     <div>
-                        <a className="align-anchor" href="www.google.com" role="button">Vezi toate cursurile</a>
+                        <a className="align-anchor" href="www.google.com" role="button">All courses</a>
                     </div>
 
         </div>
